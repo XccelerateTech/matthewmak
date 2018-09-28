@@ -1,0 +1,25 @@
+.blue {
+    background-color: blue;
+    margin-right: 42%;
+}
+
+.green {
+    background-color: green;
+    margin-left: 42%;
+}
+
+.red {
+    background-color: red;
+}
+
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+.bigbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
