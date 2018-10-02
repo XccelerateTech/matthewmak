@@ -1,0 +1,198 @@
+nav {
+    font-weight: bold;
+    border-bottom: #bbb solid 0.5px;
+}
+
+nav a{
+    color: #bbb;
+}
+
+li.nav-item {
+    margin: 0 10px;
+}
+
+.flx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap column
+}
+
+header {
+    background-image: url("header.jpg");
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    padding: 200px;
+}
+
+.largeContainer {
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 50px 20px;
+}
+
+header div h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    header div h1 {
+        font-size: 30px;
+    }
+
+    header {
+        padding: 100px;
+    }
+}
+
+p {
+    font-size: 20px;
+}
+
+header div p{
+    color: #ddd;
+    margin-bottom: 40px;
+}
+
+header div.largeContainer button {
+    background-color: #f05f40;
+    color: #fff;
+    border-radius: 30px;
+    height: 7vh;
+}
+
+.orangeHr {
+    border-color: #f05f40;
+    width: 50px;
+    border-width: 3px;
+}
+
+.second {
+    background-color: #f05f40;
+    color: #fff;
+    /* height: 600px; */
+
+}
+
+.second hr {
+    border-color: #fff;
+    width: 50px;
+    border-width: 3px;
+}
+
+.whiteButton {
+    background-color: #fff;
+    border-radius: 30px;
+    height: 7vh;
+    font-weight: bold;
+    text-align: center;
+}
+
+.third {
+    background-color: #fff;
+    color: #000;
+    /* height: 600px; */
+}
+
+.third h2 {
+    font-weight: normal;
+}
+
+.third .largeContainer {
+    max-width: 1200px;
+}
+
+.third .md-container {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    flex-wrap: wrap;
+}
+
+.third h4 {
+    font-weight: normal;
+}
+
+.third p {
+    color: #888;
+    font-size: 18px;
+}
+
+.third i {
+    color: #f05f40;
+    font-size: 50px;
+}
+
+.picContainer {
+    display: flex;
+    flex-flow: wrap row;
+}
+
+.picContainer div {
+    padding: 0;
+}
+
+.picContainer img{
+    padding: 0;
+    width: 100%
+}
+
+.picWord {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f05f40;
+    color: #fff;
+    opacity: 0;
+}
+
+.picWord:hover {
+    opacity: 0.8;
+}
+
+.forth {
+    background-color: #222;
+    color: #fff;
+    /* height: 300px; */
+}
+
+.fifth {
+    background-color: #fff;
+    color: #000;
+    /* height: 50vh; */
+}
+
+.fifth h3 {
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.fifth p {
+    color: #222;
+    font-size: 18px;
+}
+
+.sixth {
+    flex-direction: row;
+    width: 100%;
+}
+
+.sixth i {
+    color: #222;
+    font-size: 40px;
+}
+
+.sixth div {
+    padding: 0;
+}
+
+.sixth a {
+    color: #f05f40;
+    font-size: 20px;
+}
