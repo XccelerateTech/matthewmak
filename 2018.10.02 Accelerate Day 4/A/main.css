@@ -7,8 +7,29 @@ nav a{
     color: #bbb;
 }
 
+nav a:hover {
+    color: #fff;
+}
+
 li.nav-item {
     margin: 0 10px;
+}
+
+.nav-link.active {
+    color: #f05f40 !important;
+    font-weight: bold;
+}
+
+.solid {
+    background: #fff;
+    border-bottom: solid 1px #fff;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.navbar-brandActive {
+    color: #f05f40 !important;
+    font-size: 1.3rem;
 }
 
 .flx {
@@ -154,6 +175,7 @@ header div.largeContainer button {
 
 .picWord:hover {
     opacity: 0.8;
+    transition: opacity 0.5s;
 }
 
 .forth {
@@ -165,7 +187,7 @@ header div.largeContainer button {
 .fifth {
     background-color: #fff;
     color: #000;
-    /* height: 50vh; */
+    min-height: 70vh;
 }
 
 .fifth h3 {

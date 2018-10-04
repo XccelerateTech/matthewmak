@@ -7,34 +7,36 @@
     <title>Every Fucking Bootstrap Website Ever</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="animated.css">
     <link rel="stylesheet" href="main.css">
 </head>
-<body>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
     
     <nav class="navbar navbar-default fixed-top">
         <div class="container-fluid">
-            <a href="" class="navbar-brand">
+            <a href="#" class="navbar-brand">
                 THE ONLY BOOTSTRAP PAGE
             </a>
 
             <ul class="nav">
                 <li class="nav-item">
-                    <a href="#ABOUT">
+                    <a class="nav-link" href="#ABOUT">
                         ABOUT
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#FOURICONS">
+                    <a class="nav-link" href="#FOURICONS">
                         FOUR ICONS
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#BULLSHIT">
+                    <a class="nav-link" href="#BULLSHIT">
                         BULLSHIT
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#CALLME">
+                    <a class="nav-link" href="#CALLME">
                         CALL ME
                     </a>
                 </li>
@@ -89,7 +91,7 @@
 
             <div class="md-container">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <i class="fas fa-globe-asia"></i>
+                    <i class="fas fa-globe-asia animated infinite rollOut delay-3s"></i>
                     <h4>
                         This Fucking Template
                     </h4>
@@ -98,7 +100,7 @@
                     </p>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <i class="fas fa-paper-plane"></i>
+                    <i class="fas fa-paper-plane animated infinite swing delay-3s"></i>
                     <h4>
                         This Set of Four Icons
                     </h4>
@@ -107,7 +109,7 @@
                     </p>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <i class="fas fa-thumbs-up"></i>
+                    <i class="fas fa-thumbs-up animated infinite flash delay-3s"></i>
                     <h4>
                         Lots of effort
                     </h4>
@@ -116,7 +118,7 @@
                     </p>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart animated infinite bounceOut delay-3s"></i>
                     <h4>
                         Made with Love
                     </h4>
@@ -207,6 +209,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="smooth-scroll.min.js"></script>
+    <script src="smooth-scroll.js"></script>
 
 </body>
 </html>
