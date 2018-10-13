@@ -17,7 +17,7 @@ i.fas.fa-times{
     color: brown;
 }
 
-h1, h2, h3, form {
+h1, h2, h3, form, small {
     text-align: center;
 }
 
@@ -32,4 +32,27 @@ div.flx {
     flex-flow: row wrap;
 }
 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+        margin-top: 10px;
+    }
 
+    form, .btn {
+        margin:3px;
+    }
+
+    h2, h3 {
+        font-size: 16px;
+    }
+
+    td {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .btn {
+        padding: 2px;
+        font-size: 12px;
+    }
+}

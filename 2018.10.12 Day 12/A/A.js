@@ -197,11 +197,19 @@ function GodAI(){
         return winBlockLose();
     }
 
-    console.log('No winBlockLose');
-
     if (ticArr[4] == 0) {
         return 4;
     }   
+
+    if ((ticArr[1] == ticArr[3]) && (ticArr[0] == 0) && (ticArr[1] != 0)) {
+        return 0;
+    } else if ((ticArr[1] == ticArr[5]) && (ticArr[2] == 0) && (ticArr[1] != 0)) {
+        return 2;
+    } else if ((ticArr[3] == ticArr[7]) && (ticArr[6] == 0) && (ticArr[3] != 0)) {
+        return 6;
+    } else if ((ticArr[7] == ticArr[5]) && (ticArr[8] == 0) && (ticArr[7] != 0)) {
+        return 8;
+    }
 
     if (ticArr[4] == 1) {
         if (ticArr[0] == 0) {
@@ -213,6 +221,16 @@ function GodAI(){
         } else if (ticArr[8] == 0) {
             return 8;
         }
+    }
+
+    if ((ticArr[7] == ticArr[0]) && (ticArr[3] == 0) && (ticArr[7] != 0)) {
+        return 3;
+    } else if ((ticArr[7] == ticArr[2]) && (ticArr[5] == 0) && (ticArr[7] != 0)) {
+        return 5;
+    } else if ((ticArr[3] == ticArr[8]) && (ticArr[7] == 0) && (ticArr[3] != 0)) {
+        return 7;
+    } else if ((ticArr[6] == ticArr[5]) && (ticArr[7] == 0) && (ticArr[6] != 0)) {
+        return 7;
     }
 
     if ((ticArr[3] == 1) && (ticArr[4] == 2) && (ticArr[5] == 1) || (ticArr[1] == 1) && (ticArr[4] == 2) && (ticArr[7] == 1)) {
