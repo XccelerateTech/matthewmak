@@ -1,0 +1,35 @@
+td{
+    border: solid;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+i{
+    font-size: 80px;
+}
+
+i.far.fa-circle, h3{
+    color: #004C99;
+}
+
+i.fas.fa-times{
+    color: brown;
+}
+
+h1, h2, h3, form {
+    text-align: center;
+}
+
+form, .btn {
+    margin:10px;
+}
+
+div.flx {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: row wrap;
+}
+
+
