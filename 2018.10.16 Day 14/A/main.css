@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+#Drawing {
+    /* border: solid;
+    border-width: 1px;
+    border-color: #888; */
+    /* height: 800px;
+    width: 800px; */
+}

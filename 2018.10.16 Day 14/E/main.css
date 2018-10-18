@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+}
+
+.canvas{
+    border:1px black dotted;
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin: auto auto;
+}
+
+#canvas-draft{
+    background-color: transparent;
+    position: absolute;
+}

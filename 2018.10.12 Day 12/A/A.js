@@ -3,18 +3,26 @@ var ticArr = [0,0,0,0,0,0,0,0,0];
 var won = 0;
 let i = 0;
 
+window.onerror = function(error){
+    alert('There is some error when loading the game. Can you refresh the page again? Most possibily due to slow internet');
+}
+
+
 $(document).ready(function(){
 
     $('td i').hide();
 
     $('button.modePVP').click(function(){
-        $('h2.modeState').replaceWith('<h2 class="modeState">Currently in Player vs Player mode</h2>')
+        // $('h2.modeState').replaceWith('<h2 class="modeState">Currently in Player vs Player mode</h2>')
         $('h3').html("It's Player 1's turn now! Be quick!");
+        unbindButton('button.modePVP');
+
         $('td').click(function(){
             if (curPlayer == 1){
                 
                 $(this).children('.far.fa-circle').fadeIn();
                 $(this).addClass('P1');
+                $(this).unbind('click');
                 $('h3').html("It's Player 2's turn now! Be quick!");
                 $('h3').css('color','brown');
                 checkFinalWin();
@@ -24,6 +32,7 @@ $(document).ready(function(){
         
                 $(this).children('.fas.fa-times').fadeIn();
                 $(this).addClass('P2');
+                $(this).unbind('click');
                 $('h3').html("It's Player 1's turn now! Be quick!");
                 $('h3').css('color','#004C99');
                 checkFinalWin();
@@ -34,11 +43,13 @@ $(document).ready(function(){
     })
 
     $('button.modePVSAI').click(function(){
-        $('h2.modeState').replaceWith('<h2 class="modeState">Currently in Player vs Stupid AI mode</h2>')
+        // $('h2.modeState').replaceWith('<h2 class="modeState">Currently in Player vs Stupid AI mode</h2>')
         $('h3').html("It's your turn now!");
+        unbindButton('button.modePVSAI');
         $('td').click(function(){
             $(this).children('.far.fa-circle').fadeIn();
             $(this).addClass('P1');
+            $(this).unbind('click');
             ticArr[Number($(this).attr('id'))] = 1
             curPlayer = 1;
             checkFinalWin();
@@ -51,6 +62,7 @@ $(document).ready(function(){
             setTimeout(function(){
                 $(`td:eq(${i})`).children('.fas.fa-times').fadeIn();
                 $(`td:eq(${i})`).addClass('P2');
+                $(`td:eq(${i})`).unbind('click');
                 ticArr[i] = 2;
                 $('h3').html("It's your turn again! XD");
                 curPlayer = 2;
@@ -61,11 +73,13 @@ $(document).ready(function(){
     })
 
     $('button.modePVMAI').click(function(){
-        $('h2.modeState').replaceWith('<h2 class="modeState">Currently in Player vs Medium AI mode</h2>')
+        // $('h2.modeState').replaceWith('<h2 class="modeState">Currently in Player vs Medium AI mode</h2>')
         $('h3').html("It's your turn now!");
+        unbindButton('button.modePVMAI');
         $('td').click(function(){
             $(this).children('.far.fa-circle').fadeIn();
             $(this).addClass('P1');
+            $(this).unbind('click');
             let i = 0;
             ticArr[Number($(this).attr('id'))] = 1
             curPlayer = 1;
@@ -77,6 +91,7 @@ $(document).ready(function(){
             setTimeout(function(){
                 $(`td:eq(${i})`).children('.fas.fa-times').fadeIn();
                 $(`td:eq(${i})`).addClass('P2');
+                $(`td:eq(${i})`).unbind('click');
                 ticArr[i] = 2;
                 $('h3').html("It's your turn again! XD");
                 curPlayer = 2;
@@ -87,11 +102,13 @@ $(document).ready(function(){
     })
 
     $('button.modePVEAI').click(function(){
-        $('h2.modeState').replaceWith('<h2 class="modeState">You can never win the God AI @@</h2>')
+        // $('h2.modeState').replaceWith('<h2 class="modeState">You can never win the God AI @@</h2>')
         $('h3').html("It's your turn now!");
+        unbindButton('button.modePVEAI');
         $('td').click(function(){
             $(this).children('.far.fa-circle').fadeIn();
             $(this).addClass('P1');
+            $(this).unbind('click');
             let i = 0;
             ticArr[Number($(this).attr('id'))] = 1
             curPlayer = 1;
@@ -103,6 +120,7 @@ $(document).ready(function(){
             setTimeout(function(){
                 $(`td:eq(${i})`).children('.fas.fa-times').fadeIn();
                 $(`td:eq(${i})`).addClass('P2');
+                $(`td:eq(${i})`).unbind('click');
                 ticArr[i] = 2;
                 $('h3').html("It's your turn again! XD");
                 curPlayer = 2;
@@ -114,6 +132,17 @@ $(document).ready(function(){
 
 })
 
+function unbindButton(btn){
+    var btnArr = ['button.modePVP','button.modePVSAI','button.modePVMAI','button.modePVEAI']
+    for (let i = 0; i<4; i++) {
+        $(btnArr[i]).unbind('click');
+        $(btn).addClass('bg-info')
+        $(btn).css('color','white')
+        if (btn != btnArr[i]) {
+            $(btnArr[i]).addClass('bg-light');
+        };
+    };
+}
 
 function checkFinalWin(){
     checkWin(0,1,2);
