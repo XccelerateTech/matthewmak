@@ -79,11 +79,6 @@ input {
     margin: auto auto;
 }
 
-#uploadForm input {
-    display: block;
-    margin: 5px;
-}
-
 #uploadSec i {
     position: absolute;
     align-self: flex-start;
@@ -98,33 +93,48 @@ input {
 /* Input field */
 /*  */
 
-input {
-    display: block;
-    height: 50px;
-    width: 90%;
-    margin: 0 auto;
-    border: none;
+input#upload {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+    z-index: -1;
+    cursor: pointer;
+}
+
+input#upload + label, input#submit {
+    max-width: 80%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+
     color: #fff;
+    border: 2px solid #fff;
+    border-radius: 0;
+    background-color: #222;
+    font-family: Arial, sans-serif;
+    margin: 5px;
 }
-input#submit {
-    color: #000;
+
+input#upload:focus + label,
+input#upload + label:hover,
+input#submit:hover,
+input#submit:focus {
+    background-color: #fff;
+    color: #222;
 }
-input::placeholder {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-    -webkit-transition: .5s;
-    transition: .5s;
-}
-input:hover, input:focus, input:active:focus {
-    color: #ff5722;
-    outline: none;
-    border-bottom: 1px solid #ff5722;
-}
-input:hover::placeholder, input:focus::placeholder, input:active:focus::placeholder {
-    color: #ff5722;
-    position: relative;
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
 }
 
 /*  */
@@ -152,5 +162,6 @@ input:hover::placeholder, input:focus::placeholder, input:active:focus::placehol
 }
 
 #body div i.fa-times-circle {
+    float: right;
     cursor: pointer;
 }

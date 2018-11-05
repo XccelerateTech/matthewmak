@@ -27,3 +27,10 @@ $.get('/filesdir')
             })
         }
 })
+
+$('#upload').change(()=>{
+    let path = document.getElementById('upload').value;
+    let arr = path.split('\\');
+    $('#uploadLabel').html(arr[arr.length - 1]);
+})
+
