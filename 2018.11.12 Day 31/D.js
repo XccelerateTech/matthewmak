@@ -16,9 +16,11 @@ client.connect();
 
 // I will just retrieve data from staff table instead as it is established
 
-client.query("SELECT first_name, last_name FROM staff WHERE first_name = 'Steven'", function(err, results) {
+client.query("SELECT first_name, last_name FROM staff WHERE first_name = 'Steven';", function(err, results) {
     if(err) {
         console.log(err);
+    } else {
+        console.log(results.rows);
+        client.end();
     }
-    console.log(results.rows);
 })
