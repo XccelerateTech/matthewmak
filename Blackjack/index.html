@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blackjack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="https://www.google.com.hk/search?q=blackjack+strategy+chart&rlz=1C1CHZL_enHK814HK814&source=lnms&tbm=isch&sa=X&ved=0ahUKEwid68SYiqjeAhVXc3AKHSHFCOkQ_AUIDigB&biw=1920&bih=969">Blackjack</a>
+        </h1>
+        <small>
+            <a href="https://www.youtube.com/watch?v=-9YGKFdP6sY" id="help">
+                Don't know how to play?
+            </a>
+        </small>
+    </header>
+
+    <section class="main" id="computer">
+        <h2>
+            Dealer Score: 0
+        </h2>
+        <section>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </section>
+        <div class="overlay"></div>
+    </section>
+
+    <section id="money">
+        <div id="side">
+            <!-- <button id="bet">Bet 100</button> -->
+            <button id="allin">All-In</button>
+            <p id="confirmallin">Confirm All-In?</p>
+            <button id="allinno">No</button>
+            <button id="allinyes">Yes</button>
+            <button id="start">Start</button>
+            <button id="dd">x2 Down</button>
+            <button id="surrender">Surrender</button>
+        </div>
+        <div id="table">
+            <i class="fas fa-coins"></i>
+            <div class="bet thousand">
+                <i class="fas fa-arrow-circle-up"></i>
+                <p>0</p>
+                <i class="fas fa-arrow-circle-down"></i>
+            </div>
+            <div class="bet hundred">
+                <i class="fas fa-arrow-circle-up"></i>
+                <p>0</p>
+                <i class="fas fa-arrow-circle-down"></i>
+            </div>
+            <div class="bet ten">
+                <i class="fas fa-arrow-circle-up"></i>
+                <p>0</p>
+                <i class="fas fa-arrow-circle-down"></i>
+            </div>
+            <div class="bet one">
+                <i class="fas fa-arrow-circle-up"></i>
+                <p>0</p>
+                <i class="fas fa-arrow-circle-down"></i>
+            </div>
+            
+        </div>
+        <div id="hand">
+            <i class="fas fa-coins"></i>
+            <p>2000</p>
+        </div>
+    </section>
+
+    <section class="main" id="player">
+        <h2>
+            Player Score: 0
+        </h2>
+        <section>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </section>
+        <div class="overlay"></div>
+        <section class="main snddeck" id="snddeck">
+                <h2>
+                    Player Score (2nd deck): 0
+                </h2>
+                <section>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </section>
+                <div class="overlay"></div>
+            </section>
+    </section>
+
+    <footer>
+        <div class="button-row">
+            <button id="split">Split</button>
+            <button id="hit">Hit</button>
+            <button id="stand">Stand</button>
+            <button id="again">Nxt round</button>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
