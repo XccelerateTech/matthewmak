@@ -1,7 +1,7 @@
 
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('credit-card',(table) => {
-        table.increment();
+        table.increments();
         table.integer('credit card number');
         table.date('expiry date');
         table.integer('cvv');

@@ -20,7 +20,6 @@ let noteService;
 const NoteRouter = require('./routers/NoteRouter')
 
 let pass;
-let passedU;
 let Users;
 let usersObj = new JsonFile('user.json');
 let usersPms = usersObj.read((data)=>{
@@ -33,22 +32,13 @@ usersPms.then((data)=>{
 
 let myAuthFunc = (username,password)=>{
     pass = false;
-    passedU = -1;
     for(let i = 0; i < Users.length;i++){
         if (Users[i].username == username && Users[i].password == password){
             pass = true;
-            passedU = i;
             break;
         } 
     }
     
-    // Choose user
-    // if (passedU != undefined && pass){
-    //     console.log(`Instantiate noteservice again (user: ${passedU})`)
-    //     NoteService = require('./services/NoteService');
-    //     noteService = new NoteService(new JsonFile('notes.json'),passedU);
-    //     app.use('/api/notes', new NoteRouter(noteService).router());
-    // }
     return pass;
 }
 

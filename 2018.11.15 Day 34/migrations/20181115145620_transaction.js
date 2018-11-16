@@ -1,7 +1,7 @@
 
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('transaction',(table) => {
-        table.increment();
+        table.increments();
         table.decimal('amount');
         table.string('payee');
         table.string('purpose');
