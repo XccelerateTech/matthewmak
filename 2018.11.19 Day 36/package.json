@@ -1,0 +1,16 @@
+{
+  "name": "daily-classwork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "A.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.1",
+    "axios": "^0.18.0",
+    "redis": "^2.8.0"
+  }
+}
